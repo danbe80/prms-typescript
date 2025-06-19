@@ -1,3 +1,11 @@
-let myname = 'lee';
-myname = 'kim';
-// myname = 1; // 타입 에러 발생 : 타입 추론
+let student = {
+    name : 'john',
+    course: 'typescript',
+    score : 100,
+    grade : function() {
+        console.log('A');
+    }
+}
+
+student.name = 'Kim';
+student.score = 200;
