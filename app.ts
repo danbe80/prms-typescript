@@ -53,7 +53,26 @@ console.log(getInfo(5678))
 //     return a + b;
 // }
 
-const user : {name: string, age: number} = {
-    name: 'john',
-    age: '25' // 에러를 일으킴
+// any 타입은 어떤 타입이든 OK
+let anyVal: any = 100;
+anyVal = 'kim';
+
+type strOrNum = number | string;
+
+let numStr: strOrNum = '100';
+let item: number;
+function convertToString(val: strOrNum): string {
+    if(typeof val === 'string') {
+        item = 0;
+    } else {
+        item = val;
+    }
+    return String(val);
 }
+
+function convertToNumber(val: strOrNum): number {
+    return Number(val);
+}
+
+console.log(convertToString(numStr));
+console.log(convertToNumber(numStr));

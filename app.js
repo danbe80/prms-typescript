@@ -29,7 +29,22 @@ console.log(getInfo(5678));
 // function plus(a: number, b: number) : number {
 //     return a + b;
 // }
-var user = {
-    name: 'john',
-    age: '25' // 에러를 일으킴
-};
+// any 타입은 어떤 타입이든 OK
+var anyVal = 100;
+anyVal = 'kim';
+var numStr = '100';
+var item;
+function convertToString(val) {
+    if (typeof val === 'string') {
+        item = 0;
+    }
+    else {
+        item = val;
+    }
+    return String(val);
+}
+function convertToNumber(val) {
+    return Number(val);
+}
+console.log(convertToString(numStr));
+console.log(convertToNumber(numStr));
