@@ -138,3 +138,48 @@ enum GenderType {
 
 ```
 
+---
+
+# 객체 리터럴
+- 리터럴 타입은 특정 값을 나타내는 타입으로 해당 값이 정확하게 일치해야 함. 사용되는 리터럴 타입에는 다양한 종류가 있음
+
+
+- 문자열 리터럴 타입
+```ts
+  let status: 'success' | 'error'
+  status = 'success'; // 유효
+  status = 'pending'; // Error : 'pending'은 허용 X
+ ```
+
+ - 숫자 리터럴 타입
+```ts
+  let speed: 50 | 100 | 200;
+  speed = 100; // 유효
+  speed = 150; // Error
+```
+
+- 불리언 리터럴 타입
+```ts
+  let isTrue: true;
+  isTrue = true; // 유효
+  isTrue = false; // Error
+```
+
+- 객체 리터럴 타입 ( 제일 많이 사용 )
+```ts
+  let person: {name: 'John', age: 30};
+  person = {name: 'John', age: 30}; // 유효
+  person = {name: 'Alice', age: 25}; // Error
+```
+
+- 타입 별칭
+```ts
+  type CardinalDirection = 'North' | 'East' | 'South' | 'West';
+  let direction: CardinalDirection;
+  direction = 'North'; // 유효
+  direction = 'Northeast; // Error
+```
+
+## 리터럴 타입을 사용하면 좋은 점
+- 코드의 가독성을 높인다.
+- 잘못된 값이 들어오는 것을 방지한다.

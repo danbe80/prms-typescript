@@ -49,6 +49,11 @@ console.log(getInfo(5678))
 // 컴파일 에러 - syntax 에러 (문법적인 에러)
 
 // 함수의 데이터 타입 명시 (매개변수, 리턴타입)
-function plus(a: number, b: number) : number {
-    return a + b;
+// function plus(a: number, b: number) : number {
+//     return a + b;
+// }
+
+const user : {name: string, age: number} = {
+    name: 'john',
+    age: '25' // 에러를 일으킴
 }
