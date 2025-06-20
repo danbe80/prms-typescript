@@ -82,3 +82,59 @@ tsconfig.json 파일 생성
 ```ts
     let x : string = "나는 문자열이다!";
 ```
+
+---
+
+## Interface
+
+```ts
+interface Student {
+    stdId: number;
+    stdName: string;
+    age: number;
+    gender: GenderType;
+    course: string;
+    completed: boolean;
+    // setName(name: string) : void;
+    setName? : (name: string) => void;
+    getName? : () => string;
+}
+```
+오브젝트의 타입을 정의하는 interface 는 보통 명에 'I' 를 포함시켜서 만드는 규칙이 있다.
+
+ex)
+
+```ts
+interface IStudent { // Student가 아니라 IStudent
+    stdId: number;
+    stdName: string;
+    age: number;
+    gender: GenderType;
+    course: string;
+    completed: boolean;
+    // setName(name: string) : void;
+    setName? : (name: string) => void;
+    getName? : () => string;
+}
+```
+
+
+## 열거형 : 사용자 정의 타입
+```ts
+enum GenderType {
+    Male, // 0
+    Famale // 1
+}
+```
+
+열거형 enum에는 문자나 특정 값을 정하는 것도 가능하지만, 특정 값을 정하지 않으면 0부터 숫자가 차례로 들어간다
+
+ex)
+```ts
+enum GenderType {
+    Male = 'male', 
+    Famale = 'falmale'
+}
+
+```
+
