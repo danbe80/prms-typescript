@@ -15,18 +15,22 @@
 // 멤버함수 == 메소드
 
 class Employee {
-    empName : string;
-    age : number;
-    empJob : string;
+    private empName : string;
+    private age : number;
+    private empJob : string;
+
+    constructor(empName: string, age: number, empJob: string) {
+        this.empName = empName;
+        this.age = age;
+        this.empJob = empJob;
+    }
 
     printEmp= () : void => {
-    console.log(this.empName + '의 나이는' + this.age + '이고, 직업은' + this.empJob + '입니다.');
+    console.log(this.empName + '의 나이는' + this.age + '이고, 직업은 ' + this.empJob + '입니다.');
     }
 
 }
 
-let employee1 = new Employee();
-employee1.empName = 'kim';
-employee1.age = 20;
-employee1.empJob = 'developer';
+// public: 공용 ,  private: 개인(외부 접근 X), protected
+let employee1 = new Employee('kim', 20, 'developer');
 employee1.printEmp();
